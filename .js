@@ -3,11 +3,10 @@ function dropElements(arr, func) {
   newArr = arr.filter(n=> func(n) );
 
   let resultArr = [];
-
   for(let i = 0; i < arr.length; i++){
     if(arr[i] == newArr[0]){
         resultArr = arr.slice(i);
-        break;
+        break; // stop the whole loop once the first element in arr that is identical to the first element in newArr
     }
   }
   return resultArr;
