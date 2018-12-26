@@ -34,7 +34,7 @@ function dropElements2(arr, func) {
 
 /*********   Solution #3     **********************************************************************/
 
-function dropElements(arr, func) {
+function dropElements3(arr, func) {
   return arr.slice(arr.findIndex(func) >= 0 ? arr.findIndex(func): arr.length); 
   /* The findIndex() method returns the index of the first element in arr that satisfies func. 
      Otherwise, it returns -1, indicating no element passed func      */
@@ -42,7 +42,17 @@ function dropElements(arr, func) {
 
 
 
+/*********   Solution #4     **********************************************************************/
 
+/* Use a while loop with Array.prototype.shift() to continue checking and dropping the first element of the array 
+   until the function returns true. 
+   It also makes sure the array is not empty first to avoid infinite loops.                                        */
+function dropElements4(arr, func) {
+  while(arr.length > 0 && !func(arr[0])){
+    arr.shift();
+  }
+  return arr;
+}
 
 
 
