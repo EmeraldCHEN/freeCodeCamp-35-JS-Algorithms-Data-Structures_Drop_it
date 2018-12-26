@@ -2,7 +2,7 @@
 
 function dropElements(arr, func) {  
   let newArr = [];  
-  newArr = arr.filter(n=> func(n) );
+  newArr = arr.filter(n => func(n) );
 
   let resultArr = [];
   for(let i = 0; i < arr.length; i++){
@@ -32,6 +32,13 @@ function dropElements2(arr, func) {
 
 
 
+/*********   Solution #3     **********************************************************************/
+
+function dropElements(arr, func) {
+  return arr.slice(arr.findIndex(func) >= 0 ? arr.findIndex(func): arr.length); 
+  /* The findIndex() method returns the index of the first element in arr that satisfies func. 
+     Otherwise, it returns -1, indicating no element passed func      */
+}
 
 
 
