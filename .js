@@ -40,5 +40,5 @@ function dropElements2(arr, func) {
 
 
 
-// Retrived from
+// Retrived from https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/drop-it/
 
